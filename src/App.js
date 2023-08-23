@@ -9,6 +9,9 @@ import NoMatch from './Components/NoMatch';
 import Products from './Components/Products';
 import FeaturedProducts from './Components/FeaturedProducts';
 import NewProducts from './Components/NewProducts';
+import Users from './Components/Users';
+import UserData from './Components/UserData';
+import Admin from './Components/Admin';
 function App() {
   return (
     <div className="App">
@@ -22,6 +25,10 @@ function App() {
           <Route index element={<FeaturedProducts/>}/>
           <Route path='featuredProducts' element={<FeaturedProducts/>}/>
           <Route path='newProducts' element={<NewProducts/>}/>
+        </Route>
+        <Route path='users' element={<Users/>}>
+          <Route path=':userID' element={<UserData/>}/>
+          <Route path='admin' element={<Admin/>}/>
         </Route>
         <Route path='*' element={ <NoMatch/> }/>
       </Routes>

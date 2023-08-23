@@ -27,7 +27,7 @@ function App() {
           <Route path='newProducts' element={<NewProducts/>}/>
         </Route>
         <Route path='users' element={<Users/>}>
-          <Route path=':userID' element={<UserData/>}/>
+          <Route path=':userId' element={<UserData/>}/>
           <Route path='admin' element={<Admin/>}/>
         </Route>
         <Route path='*' element={ <NoMatch/> }/>
